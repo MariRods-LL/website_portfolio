@@ -1,0 +1,158 @@
+#box-contact {
+
+  max-width: 1000px;
+  width: 90%;
+  margin: auto;
+  margin-top: 30px;
+  border-radius: 1%;
+  max-height: 451px;
+
+}
+
+.lateral-box {
+  letter-spacing: 0.5;
+  border: 1px solid #bbbbbb0c;
+  height: 450px;
+  float: left;
+  border-radius: 2%;
+  margin: -10px -10px;
+  width: 50%;
+  background: linear-gradient(360deg, rgb(148, 96, 145)0%, rgb(95, 91, 145)100%);
+  font-size: 20px;
+}
+
+h2 {
+
+  text-shadow: 0 0 3px #000000, 0 0 5px #000000;
+  ;
+}
+
+.form-box {
+
+  position: relative;
+  display: block;
+  margin: auto;
+  width: 360px;
+  height: 435px;
+  max-width: 600px;
+  margin-right: 50px;
+
+
+
+}
+
+.form-box form {
+
+
+  width: 100%;
+  height: 100%;
+
+
+}
+
+.form-box form label {
+  border: 2px solid #26264d;
+
+
+
+}
+
+#icon {
+
+  background-color: #6f6fdf;
+  padding: 3px;
+  border-radius: 40%;
+  margin-right: 1px;
+  font-size: 14px;
+
+}
+
+.form-box form label input {
+
+  display: block;
+}
+
+#contact-info {
+
+
+  margin-top: 15%;
+  padding: 10px;
+  height: 60%;
+
+
+}
+
+
+#contact-info li {
+  text-align: center;
+  list-style: none;
+  margin-top: 30px;
+
+}
+
+#contact-info li a {
+  font-style: italic;
+  font-size: 15px;
+  margin-right: 5px;
+  text-decoration: none;
+
+
+}
+
+#contact-form {
+  display: block;
+  margin-top: 30px;
+  align-items: center;
+  justify-items: center;
+  margin-left: 15%;
+  width: 68%;
+  height: 20%;
+}
+
+#contact-form input,
+#contact-form textarea {
+  margin: 15px 0;
+  border: none;
+  outline: none;
+  background: linear-gradient(#565050 0%, rgba(71, 71, 71, 0.72)100%);
+  border: solid 1px rgb(124, 124, 124);
+  border-radius: 10px;
+  font-size: 15px;
+  padding: 5px 5px 10px 5px;
+
+
+}
+
+button {
+
+  width: 50%;
+  height: 50%;
+  align-items: center;
+  justify-items: center;
+  background: linear-gradient(#a86fb8 0%, rgba(154, 100, 161, 0.72)100%);
+  box-shadow: none;
+  margin-left: 60px;
+  border: none;
+  border-radius: 2px;
+  transition: background 0.5s;
+  transition: width 0.1s;
+  transition: height 0.1s;
+  font-size: 20px;
+}
+
+button:active {
+  background: rgb(85, 63, 90);
+
+}
+
+button:hover {
+  cursor: pointer;
+ 
+}
+
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}

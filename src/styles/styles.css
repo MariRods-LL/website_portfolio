@@ -1,0 +1,331 @@
+:root {
+  /* Tema escuro por padrão */
+  --text-color: #ffffff;
+  --background-color: rgb(112, 93, 93);
+  --header-color: rgb(61, 59, 59);
+  --container-color: #565050;
+  --icon-color: White;
+  --swich-bg: url(./moon-stars.svg);
+}
+
+.light {
+  /* Tema claro */
+  --text-color: #000000;
+  --background-color: #f0f0f0;
+  --header-color: #ececec;
+  --container-color: #d0d0d0;
+  --icon-color: black;
+}
+
+
+body {
+  padding-top: 70px;
+  /* Espaço igual à altura do header */
+  background-color: var(--background-color);
+  background-image: url("https://images4.alphacoders.com/772/thumb-1920-772692.jpg");
+  background-attachment: fixed;
+  /* Mantém a imagem fixa ao rolar a página */
+  background-repeat: no-repeat;
+  background-size: cover;
+  ;
+
+
+}
+
+div {
+  padding: 10px;
+
+  background-color: var(--container-color);
+  /*background-color: rgba(77, 75, 75, 0.961);*/
+
+  margin: 20px;
+  border-radius: 4%;
+  /*Adicionar borda*/
+
+
+}
+
+
+
+#top-title {
+
+  font-size: 40px;
+  padding: 35px;
+  background-color: transparent;
+  text-align: center;
+  margin: 40px;
+
+
+  /* Para animação */
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 2s ease forwards;
+  /* Aparece em 2 segundos */
+
+
+}
+
+#top-title h1 {
+  color: white;
+  transition: text-shadow 0.5s;
+  /* Transição suave para o efeito de sombra */
+}
+
+/*mini animação no título*/
+#top-title:hover {
+  text-shadow: 0 0 3px #2e2d32, 0 0 5px #71719a;
+  transition: text-shadow 0.3s;
+}
+
+div h2 {
+
+  text-align: center;
+  margin: 10px;
+  text-shadow: 0 0 3px #696969, 0 0 5px #71719a;
+
+
+}
+
+div p {
+  box-shadow: inset 8.0px 16.0px 16.0px rgba(72, 72, 75, 0.256);
+  text-align: center;
+  margin: 10px;
+  padding: 15px;
+  font-size: 15px;
+  color: var(--text-color)
+}
+
+* {
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+
+}
+
+/* Cabeçalho*/
+
+header {
+
+  gap: 15px;
+  padding: 24px 0;
+  position: fixed;
+  /* Fixa o header no topo */
+  top: 0;
+  /* Gruda no topo */
+  left: 0;
+  width: 100%;
+  /* Ocupa toda a largura */
+  background-color: var(--header-color);
+  /* Cor de fundo azul */
+  color: rgb(60, 57, 57);
+  /* Cor do texto branca */
+  padding: 0px;
+  /* Espaçamento interno */
+  text-align: center;
+  /* Alinha o texto no centro */
+  z-index: 1000;
+  /* Garante que fique acima de outros elementos */
+}
+
+nav ul div {
+
+  background-color: transparent;
+  font-size: 25px;
+
+  padding: 0px 10px;
+}
+
+header h1 {
+  margin: 0;
+  /* Remove a margem padrão do h1 */
+}
+
+nav ul {
+  gap: 39%;
+  display: flex;
+  list-style: none;
+  /* Remove os marcadores da lista */
+  padding: 0;
+  margin: 5px 0 0 0;
+  /* Adiciona um pequeno espaço acima do menu */
+}
+
+nav ul li {
+  display: inline-block;
+  /* Coloca os itens da lista um ao lado do outro */
+  margin: 0 15px;
+  /* Espaçamento entre os itens do menu */
+
+}
+
+nav ul li a {
+
+
+  color: rgb(0, 0, 0);
+  /* Cor do link branca */
+  text-decoration: none;
+  /* Remove o sublinhado dos links */
+  width: 99%;
+}
+
+#social-links {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  /* Espaçamento entre os ícones */
+  margin-top: 0px;
+  /* Espaçamento acima dos ícones */
+  color: var(--icon-color);
+
+}
+
+#menu {
+  font-size: 30px;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+#menu:active {
+  transform: rotate(90deg);
+}
+
+#social-links a {
+
+  margin-top: 20px;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.5s;
+  border-radius: 40%;
+}
+
+#social-links a:hover {
+  /* Efeito ao passar o mouse "hover"*/
+  background-color: #909090;
+  color: var(--icon-color);
+  transition: color 0.3s;
+
+}
+
+/* O BOTÃO switch */
+#switch {
+  width: 30px;
+  height: 30px;
+
+  cursor: pointer;
+  border: 0;
+  border-radius: 50%;
+  background: white url(./moon-stars.svg) no-repeat center;
+
+}
+
+
+/*menu lateral*/
+.sidebar {
+  z-index: 900;
+  font-size: 18px;
+  position: fixed;
+  top: 0;
+  left: -250px;
+  /* escondida inicialmente */
+  width: 250px;
+  height: 100%;
+  background-color: var(--header-color);
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.4);
+  transition: left 0.3s ease;
+  padding-top: 60px;
+  display: flex;
+
+}
+
+/* Quando ativa */
+.sidebar.active {
+  left: 0;
+}
+
+.sidebar ul {
+  gap: 0px;
+  list-style: none;
+  padding: 0;
+  flex-direction: column;
+}
+
+.sidebar li {
+  padding: 15px 20px;
+  width: 100%;
+}
+
+.sidebar a {
+  display: block;
+  /* faz o link ocupar toda a linha */
+  padding: 15px 20px;
+  color: white;
+  text-decoration: none;
+  word-wrap: break-word;
+  /* evita ultrapassar a caixa */
+  white-space: nowrap;
+  /* se quiser evitar quebra de linha longa */
+  overflow: hidden;
+  /* esconde texto que passa da borda */
+  text-overflow: ellipsis;
+  /* adiciona "..." se o texto for muito grande */
+  width: 99%;
+  transition: background 0.5s;
+
+}
+
+.sidebar a:hover {
+  background-color: #333;
+  color: #00bfff;
+
+}
+
+
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: var(--header-color);
+  color: var(--text-color);
+  position: relative;
+  bottom: 0;
+  width: auto;
+  margin-top: 20px;
+  margin-bottom: 0px  ;
+  
+}
+
+footer p {
+  margin: 0;
+  font-size: 14px;
+  color: var(--text-color);
+}
+
+/* Para animação */
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes deslizar-para-centro {
+
+  /* Estado inicial: 0% */
+  from {
+    transform: translateY(-150%);
+    /* A div começa fora da tela, 150% para a esquerda */
+    opacity: 0;
+  }
+
+  /* Estado final: 100% */
+  to {
+    transform: translateY(0);
+    /* A div termina na posição central */
+    opacity: 1;
+  }
+}
