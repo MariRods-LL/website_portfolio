@@ -1,9 +1,11 @@
-import express from "express";
-import nodemailer from "nodemailer";
-import cors from "cors";
-import dotenv from "dotenv";
+const express = require("express");
+const nodemailer = require("nodemailer");
+const dotenv = require("dotenv");
+const cors = require("cors");
 
-dotenv.config(); 
+
+require("dotenv").config();
+
 
 
 const app = express();
@@ -12,6 +14,7 @@ app.use(express.json());
 
 app.post("/send", async (req, res) => {
   const { name, email, message } = req.body;
+  console.log("Recebido:", req.body);
 
   let transporter = nodemailer.createTransport({
     host: "smtp.gmail.com",
@@ -27,7 +30,7 @@ app.post("/send", async (req, res) => {
     from: email,
     to: "mariannarodrigues968@gmail.com",
     subject: `Nova mensagem do Site de ${name}`,
-    text: message,
+    text: email, message,
   });
 
   res.json({ status: "ok" });
