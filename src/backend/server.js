@@ -36,4 +36,18 @@ app.post("/send", async (req, res) => {
   res.json({ status: "ok" });
 });
 
+function isValidEmail(email) {
+  const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return regex.test(email);
+}
+
+app.post("/send", async (req, res) => {
+  const { name, email, message } = req.body;
+
+  if (!isValidEmail(email)) {
+    return res.status(400).json({ error: "Email inválido" });
+  }
+});
+
+
 app.listen(3000, () => console.log("Servidor rodando..."));
