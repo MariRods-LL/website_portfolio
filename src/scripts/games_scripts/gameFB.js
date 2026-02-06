@@ -2,10 +2,10 @@ console.log('[DevSoutinho] Flappy Bird');
 
 let frames = 0;
 const som_HIT = new Audio();
-som_HIT.src = '/efeitos/hit.wav';
+som_HIT.src = '../../../assets/audio/games/hit.mp3';
 
 const sprites = new Image();
-sprites.src = '/assets/images/sprites.png';
+sprites.src = '../../../assets/images/games/sprites.png';
 
 const canvas = document.querySelector('canvas');
 const contexto = canvas.getContext('2d');
