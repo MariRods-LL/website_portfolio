@@ -39,7 +39,7 @@ div {
   /*background-color: rgba(77, 75, 75, 0.961);*/
 
   margin: 20px;
-  border-radius: 4%;
+  border-radius: 40px;
   /*Adicionar borda*/
 
 
@@ -81,7 +81,7 @@ div h2 {
 
   text-align: center;
   margin: 10px;
-  text-shadow: 0 0 3px #696969, 0 0 5px #71719a;
+  text-shadow: 0 0 3px #696969, 0 0 5px #6d6d6d;
 
 
 }
