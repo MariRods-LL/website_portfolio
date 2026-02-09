@@ -58,7 +58,11 @@
   border-width: 2px;
   border-color: #626262;
   background-color: #474343;
+<<<<<<< HEAD
   border-radius: 30px;
+=======
+  border-radius: 9%;
+>>>>>>> 103b36a689758b72b2d7dccdf2158e56bedf8f68
   padding: 15px;
 
   width: 300px;
