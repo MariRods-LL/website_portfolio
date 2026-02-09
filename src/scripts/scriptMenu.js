@@ -10,19 +10,19 @@
 
     const skillData = {
       porg_soft: {
-        text: "Capacidade de analisar problemas e propor soluções lógicas",
+        text: "Nos últimos anos, desenvolvi competências de programação de software e web,  aprendendo a realizar aplicações eficientes e seguras, com foco na funcionalidade.  Trabalhei e testei diferentes linguagens e tecnologias essenciais para atender todas as necessidades e trazendo uma ótima experiência para usuário, continuo evoluindo e aplicando boas práticas de código.",
         img: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Logic-dice.jpg/240px-Logic-dice.jpg"
       },
       design_ilus: {
-        text: "Linguagem usada para consultar e manipular bancos de dados relacionais.",
+        text: "Na área de ilustração, utilizo criatividade, senso estético e muita atenção aos detalhes ao desenvolver identidades visuais, interfaces, ilustrações e elementos gráficos. ",
         img: "https://upload.wikimedia.org/wikipedia/commons/8/87/Sql_data_base_with_logo.png"
       },
       dev_game: {
-        text: "Python e React.js: combinação poderosa para backend e frontend modernos.",
+        text: " Atuei no desenvolvimento de jogos, criando mecânicas, sistemas interativos, buscando sempre equilibrar diversão, desempenho e estabilidade para oferecer uma experiência imersiva ao jogador.",
         img: "https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg"
       },
       ti: {
-        text: "Linguagem robusta e orientada a objetos para aplicações multiplataforma.",
+        text: "Possuo conhecimentos ampliados em tecnologia da informação, incluindo hardware, software, sistemas operacionais, redes e manutenção. permite-me diagnosticar problemas, prestar suporte, otimizar sistemas e integrar soluções tecnológicas de forma eficiente e confiável.",
         img: "https://upload.wikimedia.org/wikipedia/en/3/30/Java_programming_language_logo.svg"
       }
     };
