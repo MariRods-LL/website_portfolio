@@ -81,7 +81,8 @@ div h2 {
 
   text-align: center;
   margin: 10px;
-  text-shadow: 0 0 3px #696969, 0 0 5px #6d6d6d;
+ font-size: 26px;
+  text-shadow: 0 0 60px #939393, 0 0 6px #3d3d3d;
 
 
 }
@@ -99,7 +100,7 @@ div p {
   color: var(--text-color);
   margin: 0;
   padding: 0;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto',  sans-serif;
 
 }
 

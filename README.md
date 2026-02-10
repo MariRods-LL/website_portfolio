@@ -1,6 +1,5 @@
-# Welcome to GitHub Desktop!
+# My portifolio Website
 
-This is your README. READMEs are where you can communicate what your project is and how to use it.
+EN - I'm a programming student and this is my personal portfolio focusing on front-end (HTML, CSS, JS) and back-end ( Node.js), subject to change and improvements.(only available in Portuguese)
 
-Write your name on line 6, save it, and then head back to GitHub Desktop.
-ma17
+PT - Sou estudante de programação e esse é meu portfólio pessoal com foco em Front-end HTML CSS JS e uma simples Back-end,( Node.js), sujeito a alteração e melhorias.(disponível apenas em português)
