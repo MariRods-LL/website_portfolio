@@ -58,11 +58,7 @@
   border-width: 2px;
   border-color: #626262;
   background-color: #474343;
-<<<<<<< HEAD
-  border-radius: 30px;
-=======
   border-radius: 9%;
->>>>>>> 103b36a689758b72b2d7dccdf2158e56bedf8f68
   padding: 15px;
 
   width: 300px;
@@ -93,8 +89,21 @@
 
 
 
-
-
+#Vermais{
+  
+  text-align: center;
+   margin-left: 310px;
+  width: 140px;
+   border-radius: 70px;
+   justify-content: center;
+   text-decoration: none;
+     transition: background 0.5s;
+}
+#Vermais:hover {
+  
+ background-color: #45225394;
+  transition: color 0.3s;
+}
 
 
 .certificados {
