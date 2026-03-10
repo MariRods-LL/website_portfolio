@@ -23,7 +23,7 @@
       },
       ti: {
         text: "Possuo conhecimentos ampliados em tecnologia da informação, incluindo hardware, software, sistemas operacionais, redes e manutenção. permite-me diagnosticar problemas, prestar suporte, otimizar sistemas e integrar soluções tecnológicas de forma eficiente e confiável.",
-        img: ""
+        img: "assets/images/myart/programming.png"
       }
     };
 
