@@ -181,13 +181,15 @@
 .modal-content {
   display: flex;
   align-items: center;
-  gap: 25px;
+  gap: 15px;
   width: 100%;
   border-radius: 5px;
-  padding: 20px;
+  padding: 15px;
+  margin: 15px;
 
 
 }
+
 
 .modal p {
 
@@ -222,4 +224,17 @@
 
 .close:hover {
   color: #464849;
+}
+#welcome-art {
+  width: 170px;
+  height: auto;
+  margin-bottom: 20px;
+  filter:  drop-shadow(1px 10px 10px #ffffff);
+animation: pulse 5s infinite; 
+
+}
+
+@keyframes pulse {
+0%, 90% { transform: scale(1); }
+40% { transform: scale(1.2); }
 }
