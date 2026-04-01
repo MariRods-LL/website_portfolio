@@ -10,8 +10,8 @@
 
     const skillData = {
       porg_soft: {
-        text: "Nos últimos anos, desenvolvi competências de programação de software e web,  aprendendo a realizar aplicações eficientes e seguras, com foco na funcionalidade.  Trabalhei e testei diferentes linguagens e tecnologias essenciais para atender todas as necessidades e trazendo uma ótima experiência para usuário, continuo evoluindo e aplicando boas práticas de código.",
-        img: ""
+        text: "Nos últimos anos, desenvolvi competências de programação de software e web. Trabalhei e testei diferentes linguagens e tecnologias essenciais para atender todas as necessidades e trazendo uma ótima experiência para usuário, continuo evoluindo e aplicando boas práticas de código.",
+        img: "assets/images/myart/TIArt.png"
       },
       design_ilus: {
         text: "Na área de ilustração, utilizo criatividade, senso estético e muita atenção aos detalhes ao desenvolver identidades visuais, interfaces, ilustrações e elementos gráficos. ",
@@ -19,7 +19,7 @@
       },
       dev_game: {
         text: " Atuei no desenvolvimento de jogos, criando mecânicas, sistemas interativos, buscando sempre equilibrar diversão, desempenho e estabilidade para oferecer uma experiência imersiva ao jogador.",
-        img: ""
+        img: "assets/images/myart/GammingArt.png"
       },
       ti: {
         text: "Possuo conhecimentos ampliados em tecnologia da informação, incluindo hardware, software, sistemas operacionais, redes e manutenção. permite-me diagnosticar problemas, prestar suporte, otimizar sistemas e integrar soluções tecnológicas de forma eficiente e confiável.",
