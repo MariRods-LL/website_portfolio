@@ -5,7 +5,7 @@
   --header-color: rgb(61, 59, 59);
   --container-color: #565050;
   --icon-color: White;
-  --swich-bg: url(./moon-stars.svg);
+ 
 }
 
 .light {
@@ -100,7 +100,7 @@ div p {
   color: var(--text-color);
   margin: 0;
   padding: 0;
- font-family: 'Open Sans', sans-serif;
+ font-family: 'Roboto', sans-serif;
 
 }
 
