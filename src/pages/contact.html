@@ -8,8 +8,12 @@
 
 
 </head>
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+
 
 <body>
+  
   <header>
 
     <nav>
@@ -48,16 +52,11 @@
 
     <ul id="contact-info">
       <li>
-        <i class=" fas fa-phone-alt"> </i>
-        <ion-icon id = "icon" name="call-outline"></ion-icon>
-        <span>Phone </span><br><a href="tel:+55 11 93700-2017">+55 11 93700-2017</a>
-      </li>
-
-      <li>
         <i class=" fas fa-paper-plane"> </i>
         <ion-icon id = "icon" name="mail-outline"></ion-icon>
-        <span>Email</span> <br><a href="Mailto:mariannarodrigues968@gmail">mariannarodrigues968@gmail.com</a><br> <a href="Mailto:mariannarodrigues188@gmail">mariannarodrigues188@gmail.com</a>
+        <span>Email</span> <br> <a href="Mailto:mariannarodrigues188@gmail">mariannarodrigues188@gmail.com</a>
       </li>
+      <div id="box-contact" class="g-recaptcha" data-sitekey="6LdHb6MsAAAAABOuag3hfnScIphFBEVpcMBRKNdC"></div>
     </ul>
 
 
@@ -80,7 +79,8 @@
     <input type="hidden" name="_captcha" value="false">
     <input type="hidden" name="_template" value="table">
 
-    <button id="button-sent" type="submit">Enviar</button>
+    <button id="button-sent" type="submit">Enviar</button> 
+    
 </form>
 
 
