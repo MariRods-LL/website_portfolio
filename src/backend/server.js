@@ -10,12 +10,14 @@ const app = express();
 
 // Segurança CORS evitando que outros sites mal inencionados, façam requisições para o backend.
 const allowedOrigins = [
-  "http://localhost:5500",
-  "http://localhost:3000",
-  "http://localhost:5501",
-  "http://127.0.0.1:3000",
-  "http://127.0.0.1:5500",
-   "http://localhost:3000/send",
+  "http://localhost:5500",// para testes locais
+  "http://localhost:3000",// para testes locais
+  "http://localhost:5501",// para testes locais
+  "http://127.0.0.1:3000",// para testes locais
+  "http://127.0.0.1:5500",// para testes locais
+   "http://localhost:3000/send",// para testes locais
+   
+   "https://website-portfolio-o8vp.onrender.com",
   "https://MariRods-LL.github.io"
 ];
 
@@ -65,7 +67,7 @@ app.post("/send", async (req, res) => {
   }
 
   try {
-    // 🔐 Verificação do reCAPTCHA
+    // Verificação do reCAPTCHA
     const verifyUrl = "https://www.google.com/recaptcha/api/siteverify";
 
     const response = await axios.post(verifyUrl, null, {
@@ -109,4 +111,5 @@ Mensagem: ${message}
   }
 });
 //rodando o servidor em localhost:3000
-app.listen(3000, () => console.log("Servidor rodando..."));
+const PORT = process.env.PORT || 3000;// alteração para opção do Render
+app.listen(PORT, () => console.log("Servidor rodando"));
