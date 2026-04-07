@@ -16,7 +16,7 @@ const allowedOrigins = [
   "http://127.0.0.1:3000",// para testes locais
   "http://127.0.0.1:5500",// para testes locais
    "http://localhost:3000/send",// para testes locais
-   
+
    "https://website-portfolio-o8vp.onrender.com",
   "https://MariRods-LL.github.io"
 ];
@@ -112,4 +112,13 @@ Mensagem: ${message}
 });
 //rodando o servidor em localhost:3000
 const PORT = process.env.PORT || 3000;// alteração para opção do Render
-app.listen(PORT, () => console.log("Servidor rodando"));
+app.listen(PORT, () => console.log('Servidor rodando na porta ${PORT}'));
+
+
+//comandos de teste para verificar se o servidor está funcionando corretamente.
+app.get("/", (req, res) => {
+  res.status(200).send("Em Funcionamento");
+});
+app.get("/teste", (req, res) => {
+  res.send("Funcionando!");
+});
