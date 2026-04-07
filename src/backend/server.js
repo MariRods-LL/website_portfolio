@@ -17,7 +17,7 @@ const allowedOrigins = [
   "http://127.0.0.1:5500",// para testes locais
    "http://localhost:3000/send",// para testes locais
    "https://website-portfolio-o8vp.onrender.com",
-  "https://marirods-LL.github.io"
+  "https://marirods-ll.github.io"
 ];
 
 app.use(cors({
