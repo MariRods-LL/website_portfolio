@@ -6,17 +6,14 @@ const rateLimit = require("express-rate-limit");
 const axios = require("axios");
 
 dotenv.config();
+
 const app = express();
+
 app.set("trust proxy", 1);
-// Segurança CORS evitando que outros sites mal inencionados, façam requisições para o backend.
-const allowedOrigins = [
-  "http://localhost:5500",// para testes locais
-  "http://localhost:3000",// para testes locais
-  "http://localhost:5501",// para testes locais
-  "http://127.0.0.1:3000",// para testes locais
-  "http://127.0.0.1:5500",// para testes locais
-   "http://localhost:3000/send",// para testes locais
-   "https://website-portfolio-o8vp.onrender.com",
+
+const allowedOrigins = [ // Segurança CORS evitando que outros sites mal inencionados, façam requisições para o backend.
+  "http://localhost:5500",
+  "http://127.0.0.1:5500",
   "https://marirods-ll.github.io"
 ];
 
@@ -25,38 +22,41 @@ app.use(cors({
     if (!origin || allowedOrigins.includes(origin)) {
       callback(null, true);
     } else {
-      callback(new Error("Bloqueado pelo CORS"));
+      console.log("Bloqueado pelo CORS:", origin);
+      callback(null, false);
     }
   }
 }));
 
-//limitação de taxa para evitar spam.
+//  limitar o tamanho do corpo da requisição
+
+app.use(express.json());
+
 const limiter = rateLimit({
   windowMs: 15 * 60 * 1000,
   max: 100
 });
+
 app.use(limiter);
 
-app.use(express.json());
+// rota  para teste
+app.get("/", (req, res) => {
+  res.send("API OK  ");
+});
 
-
-const verifyUrl = "https://www.google.com/recaptcha/api/siteverify";
-
-// Validação de email
 function isValidEmail(email) {
   const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   return regex.test(email);
 }
 
+// rota principal
 app.post("/send", async (req, res) => {
   const { name, email, message, token } = req.body;
 
-  //  Verifica token
   if (!token) {
     return res.status(400).json({ error: "Token reCAPTCHA ausente" });
   }
 
-  //  Valida dados
   if (!name || !email || !message) {
     return res.status(400).json({ error: "Dados incompletos" });
   }
@@ -66,7 +66,6 @@ app.post("/send", async (req, res) => {
   }
 
   try {
-    // Verificação do reCAPTCHA
     const verifyUrl = "https://www.google.com/recaptcha/api/siteverify";
 
     const response = await axios.post(verifyUrl, null, {
@@ -80,7 +79,6 @@ app.post("/send", async (req, res) => {
       return res.status(400).json({ error: "reCAPTCHA inválido" });
     }
 
-    // 📧 Envio do email
     let transporter = nodemailer.createTransport({
       host: "smtp.gmail.com",
       port: 587,
@@ -93,7 +91,7 @@ app.post("/send", async (req, res) => {
 
     await transporter.sendMail({
       from: process.env.EMAIL_USER,
-      to: "mariannarodrigues968@gmail.com",
+      to: "mariannnarodrigues968@gmail.com",
       subject: `Nova mensagem do site de ${name}`,
       text: `
 Nome: ${name}
@@ -110,15 +108,9 @@ Mensagem: ${message}
   }
 });
 
-//rodando o servidor em localhost:3000
-const PORT = process.env.PORT || 3000;// alteração para opção do Render
-app.listen(PORT, () => console.log('Servidor rodando na porta ${PORT}'));
+const PORT = process.env.PORT || 3000;
 
+app.listen(PORT, () => {
+  console.log(`Servidor rodando na porta ${PORT}`);
+});c
 
-//comandos de teste para verificar se o servidor está funcionando corretamente.
-app.get("/", (req, res) => {
-  res.status(200).send("Em Funcionamento");
-});
-app.get("/teste", (req, res) => {
-  res.send("Funcionando!");
-});
