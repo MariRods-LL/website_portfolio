@@ -109,8 +109,7 @@ Mensagem: ${message}
     res.status(500).json({ error: "Erro no servidor" });
   }
 });
-console.log("Token recebido:", token);
-console.log("Resposta do Google:", response.data);
+
 //rodando o servidor em localhost:3000
 const PORT = process.env.PORT || 3000;// alteração para opção do Render
 app.listen(PORT, () => console.log('Servidor rodando na porta ${PORT}'));

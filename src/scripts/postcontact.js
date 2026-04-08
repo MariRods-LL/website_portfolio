@@ -18,7 +18,8 @@ if (!token) {
   headers: { "Content-Type": "application/json" },
   body: JSON.stringify(data)
 });
-
+console.log("Token recebido:", token);
+console.log("Resposta do Google:", res);
 const result = await res.json();
 
 if (res.ok) {
