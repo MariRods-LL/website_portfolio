@@ -6,7 +6,6 @@ const rateLimit = require("express-rate-limit");
 const axios = require("axios");
 
 dotenv.config();
-
 const app = express();
 
 app.set("trust proxy", 1);
@@ -107,10 +106,10 @@ Mensagem: ${message}
     res.status(500).json({ error: "Erro no servidor" });
   }
 });
-
+// Iniciar o servidor
 const PORT = process.env.PORT || 3000;
 
 app.listen(PORT, () => {
   console.log(`Servidor rodando na porta ${PORT}`);
-});c
+}); 
 
